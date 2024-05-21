@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_FR_VLD_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_FR_VLD_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_LDMs Balance_sheet_recognised_financial_asset_instrument_by_fair_value_type_uniqueID="123321_2018-09-30_BLZ10" INSTRMNT_ID="123321" RPRTNG_AGNT_ID="BLZ10" DT_RFRNC="2018-09-30T00:00:00.000+0100" INSTRMNT_RL_TYP="35">
+    <parent_BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM href="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+  </BIRD_FR_VLD_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_LDMs>
+</input_tables:BIRD_FR_VLD_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_LDM_Table>

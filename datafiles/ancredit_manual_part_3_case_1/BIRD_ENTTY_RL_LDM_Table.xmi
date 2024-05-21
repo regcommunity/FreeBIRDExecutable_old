@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_ENTTY_RL_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:input_tables="input_tables">
+  <BIRD_ENTTY_RL_LDMs ENTTY_RL_TYP="35" BIRD_ENTTY_RL_LDM_uniqueID="BLZ10_2018-09-30_BLZ10">
+    <Entity_role_type_delegate xsi:type="input_tables:BIRD_CRDTR_LDM" href="BIRD_CRDTR_LDM_Table.xmi#BLZ10_2018-09-30_BLZ10"/>
+  </BIRD_ENTTY_RL_LDMs>
+  <BIRD_ENTTY_RL_LDMs BIRD_ENTTY_RL_LDM_uniqueID="78451209_2018-09-30_BLZ10">
+    <Entity_role_type_delegate xsi:type="input_tables:BIRD_LN_DBTR_LDM" href="BIRD_LN_DBTR_LDM_Table.xmi#78451209_2018-09-30_BLZ10"/>
+  </BIRD_ENTTY_RL_LDMs>
+  <BIRD_ENTTY_RL_LDMs ENTTY_RL_TYP="24" BIRD_ENTTY_RL_LDM_uniqueID="63829150_2018-09-30_BLZ10">
+    <Entity_role_type_delegate xsi:type="input_tables:BIRD_PRTCTN_PRVDR_LDM" href="BIRD_PRTCTN_PRVDR_LDM_Table.xmi#63829150_2018-09-30_BLZ10"/>
+  </BIRD_ENTTY_RL_LDMs>
+</input_tables:BIRD_ENTTY_RL_LDM_Table>

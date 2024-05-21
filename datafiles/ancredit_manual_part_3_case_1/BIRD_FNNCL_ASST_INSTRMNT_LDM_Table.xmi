@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_FNNCL_ASST_INSTRMNT_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:input_tables="input_tables">
+  <BIRD_FNNCL_ASST_INSTRMNT_LDMs BIRD_ABSTRCT_INSTRMNT_RL_LDM_uniqueID="123321_2018-09-30_BLZ10" RPRTNG_AGNT_ID="BLZ10" DT_RFRNC="2018-09-30T00:00:00.000+0100" INSTRMNT_ID="123321" INSTRMNT_RL_TYP="35" PRPS="8" DT_INCPTN="2017-11-16T00:00:00.000+0000" DT_STTLMNT="2017-12-01T00:00:00.000+0000" TYP_AMRTSTN="3" PYMNT_FRQNCY="8" TYP_INTRST_RT="2" CMMTMNT_INCPTN="100000000" EXPSR_RCRS_INDCTR="1" FNNCL_ASST_INSTRMNT_TYP_INTRST_RT_ONL="35" FNNCL_ASST_INSTRMNT_TYP="35" FNNCL_ASST_INSTRMNT_TYP_FXD_INTRST_RT="35" FNNCL_ASST_INSTRMNT_TYP_RNGTTN_STTS="35" FNNCL_ASST_INSTRMNT_TYP_CRR_123="35" INTRST_RT_RST_FRQNCY="8" DBT_FNNCNG_RGLTN867_2016_INDCTR="2">
+    <linked_BIRD_INSTRMNT_LDM href="BIRD_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Financial_asset_instrument_type_by_renegotiation_status_delegate xsi:type="input_tables:BIRD_NN_RNGTTD_FNNCL_ASST_INSTRMNT_LDM" href="BIRD_NN_RNGTTD_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Financial_asset_instrument_type_by_fixed_interest_rate_delegate xsi:type="input_tables:BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_LDM" href="BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Financial_asset_instrument_type_by_CRR_Article_123_Retail_exposure__delegate xsi:type="input_tables:BIRD_PRFRMNG_NN_RTL_EXPSR_CLSS_FNNCL_ASST_INSTRMNT_LDM" href="BIRD_PRFRMNG_NN_RTL_EXPSR_CLSS_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Financial_asset_instrument_type_by_interest_rate_only_delegate xsi:type="input_tables:BIRD_NN_INTRST_ONL_FNNCL_ASST_INSTRMNT_LDM" href="BIRD_NN_INTRST_ONL_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Financial_asset_instrument_type_delegate xsi:type="input_tables:BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM" href="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Past_due_financial_asset_instrument_indicator_delegate xsi:type="input_tables:BIRD_NT_PST_DU_FNNCL_ASST_INSTRMNT_LDM" href="BIRD_NT_PST_DU_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+  </BIRD_FNNCL_ASST_INSTRMNT_LDMs>
+</input_tables:BIRD_FNNCL_ASST_INSTRMNT_LDM_Table>

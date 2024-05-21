@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_NN_RNGTTD_FNNCL_ASST_INSTRMNT_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_NN_RNGTTD_FNNCL_ASST_INSTRMNT_LDMs Financial_asset_instrument_type_by_renegotiation_status_uniqueID="123321_2018-09-30_BLZ10" RPRTNG_AGNT_ID="BLZ10" INSTRMNT_ID="123321" INSTRMNT_RL_TYP="35" DT_RFRNC="2018-09-30T00:00:00.000+0100">
+    <parent_BIRD_FNNCL_ASST_INSTRMNT_LDM href="BIRD_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+  </BIRD_NN_RNGTTD_FNNCL_ASST_INSTRMNT_LDMs>
+</input_tables:BIRD_NN_RNGTTD_FNNCL_ASST_INSTRMNT_LDM_Table>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_INSTRMNT_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:input_tables="input_tables">
+  <BIRD_INSTRMNT_LDMs INSTRMNT_TYP_PRDCT="1022" INSTRMNT_RPRTNG_AGNT_ID="BLZ10" INSTRMNT_RFRNC_DT="2018-09-30T00:00:00.000+0100" INSTRMNT_TYP_ORGN="1022" INSTRMNT_ID="123321" BIRD_INSTRMNT_LDM_uniqueID="123321_2018-09-30_BLZ10">
+    <Instrument_acts_in_Instrument_role_s__2wayassociation href="BIRD_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Instrument_type_by_origin_delegate xsi:type="input_tables:BIRD_INSTRMNT_RSLTNG_DRCTLY_FNNCL_CNTRCT_LDM" href="BIRD_INSTRMNT_RSLTNG_DRCTLY_FNNCL_CNTRCT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Instrument_type_by_product_delegate xsi:type="input_tables:BIRD_OTHR_LN_LDM" href="BIRD_OTHR_LN_LDM.xmi#123321_2018-09-30_BLZ10"/>
+  </BIRD_INSTRMNT_LDMs>
+  <BIRD_INSTRMNT_LDMs INSTRMNT_TYP_PRDCT="14" INSTRMNT_RPRTNG_AGNT_ID="BLZ10" INSTRMNT_RFRNC_DT="2018-09-30T00:00:00.000+0100" INSTRMNT_TYP_ORGN="14" INSTRMNT_ID="GUA28569811" BIRD_INSTRMNT_LDM_uniqueID="GUA28569811_2018-09-30_BLZ10">
+    <Instrument_acts_in_Instrument_role_s__2wayassociation href="BIRD_OFF_BLNC_SHT_ITM_RCVD_INSTRMNT_LDM_Table.xmi#GUA28569811_2018-09-30_BLZ10"/>
+    <Instrument_type_by_origin_delegate xsi:type="input_tables:BIRD_INSTRMNT_RSLTNG_DRCTLY_FNNCL_CNTRCT_LDM" href="BIRD_INSTRMNT_RSLTNG_DRCTLY_FNNCL_CNTRCT_LDM_Table.xmi#GUA28569811_2018-09-30_BLZ10"/>
+    <Instrument_type_by_product_delegate xsi:type="input_tables:BIRD_FNNCL_GRNT_INSTMNT_NT_DBT_SCTY_LDM" href="BIRD_FNNCL_GRNT_INSTMNT_NT_DBT_SCTY_LDM_Table.xmi#GUA28569811_2018-09-30_BLZ10"/>
+  </BIRD_INSTRMNT_LDMs>
+</input_tables:BIRD_INSTRMNT_LDM_Table>

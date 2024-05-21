@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_SNGL_FNNCL_CNTRCT_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_SNGL_FNNCL_CNTRCT_LDMs FNNCL_CNTRCT_RPRTNG_AGNT_ID="BLZ10" FNNCL_CNTRCT_RFRNC_DT="2018-09-30T00:00:00.000+0100" DT_LGL_FNL_MTRTY="2018-09-30T00:00:00.000+0100" DT_INCPTN="2018-09-30T00:00:00.000+0100" FNNCL_CNTRCT_ID="A810" BIRD_FNNCL_CNTRCT_LDM_uniqueID="A810_2018-09-30_BLZ10">
+    <Financial_contract_gives_rise_to_Instrument_resulting_directly_from_a_Financial_contract_2wayassociation href="BIRD_INSTRMNT_RSLTNG_DRCTLY_FNNCL_CNTRCT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+    <Financial_contract_gives_rise_to_Instrument_resulting_directly_from_a_Financial_contract_2wayassociation href="BIRD_INSTRMNT_RSLTNG_DRCTLY_FNNCL_CNTRCT_LDM_Table.xmi#GUA28569811_2018-09-30_BLZ10"/>
+  </BIRD_SNGL_FNNCL_CNTRCT_LDMs>
+</input_tables:BIRD_SNGL_FNNCL_CNTRCT_LDM_Table>

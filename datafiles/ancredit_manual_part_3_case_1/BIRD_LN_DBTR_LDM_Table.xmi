@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_LN_DBTR_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_LN_DBTR_LDMs Entity_role_type_uniqueID="78451209_2018-09-30_BLZ10" PRTY_ID="78451209" PRTY_RFRNC_DT="2018-09-30T00:00:00.000+0100" PRTY_RPRTNG_AGNT_ID="78451209">
+    <parent_BIRD_ENTTY_RL_LDM href="BIRD_ENTTY_RL_LDM_Table.xmi#78451209_2018-09-30_BLZ10"/>
+    <linked_BIRD_PRTY_LDM href="BIRD_PRTY_LDM_Table.xmi#78451209_2018-09-30_BLZ10"/>
+    <Loan_debtor_is_obliged_to_pay_Other_loan_s_via_Other_loan_Debtor_assignment_2wayassociation href="BIRD_OTHR_LN_DBTR_ASSGNMNT_LDM_Table.xmi#123321_78451209_2018-09-30_BLZ10"/>
+  </BIRD_LN_DBTR_LDMs>
+</input_tables:BIRD_LN_DBTR_LDM_Table>

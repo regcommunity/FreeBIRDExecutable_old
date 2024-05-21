@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input_tables:BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_LDM_Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:input_tables="input_tables">
+  <BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_LDMs Financial_asset_instrument_type_by_fixed_interest_rate_uniqueID="123321_2018-09-30_BLZ10" INSTRMNT_ID="123321" RPRTNG_AGNT_ID="BLZ10" DT_RFRNC="2018-09-30T00:00:00.000+0100" INSTRMNT_RL_TYP="35">
+    <parent_BIRD_FNNCL_ASST_INSTRMNT_LDM href="BIRD_FNNCL_ASST_INSTRMNT_LDM_Table.xmi#123321_2018-09-30_BLZ10"/>
+  </BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_LDMs>
+</input_tables:BIRD_FXD_INTRST_FNNCL_ASST_INSTRMNT_LDM_Table>
