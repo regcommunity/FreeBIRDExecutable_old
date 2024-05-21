@@ -1,0 +1,142 @@
+package F_05_01_REF_OutputItem_output_layer_amendment
+import sdd_domains.*
+import input_tables.*
+import output_tables.*
+import F_05_01_REF_OutputItem_Logic.*
+class F_05_01_REF_OutputItem {
+	refers F_05_01_REF_OutputItem_UnionItem  unionOfLayers 
+
+ 	op int  GRSS_CRRYNG_AMNT()
+	{
+		unionOfLayers.GRSS_CRRYNG_AMNT()
+	}
+
+
+ 	op int  CRRYNG_AMNT()
+	{
+		unionOfLayers.CRRYNG_AMNT()
+	}
+
+
+ 	op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN()
+	{
+		unionOfLayers.ACCNTNG_CLSSFCTN()
+	}
+
+
+ 	op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM()
+	{
+		unionOfLayers.TYP_ACCNTNG_ITM()
+	}
+
+
+ 	op HLD_SL_INDCTR_domain  HLD_SL_INDCTR()
+	{
+		unionOfLayers.HLD_SL_INDCTR()
+	}
+
+
+ 	op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR()
+	{
+		unionOfLayers.HLD_TRDNG_INDCTR()
+	}
+
+
+ 	op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR()
+	{
+		unionOfLayers.HLD_MTRTY_INDCTR()
+	}
+
+
+ 	op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR()
+	{
+		unionOfLayers.SBJCT_IMPRMNT_INDCTR()
+	}
+
+
+ 	op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL()
+	{
+		unionOfLayers.ACCNTNG_PRTFL_VLTN_RL()
+	}
+
+
+ 	op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK()
+	{
+		unionOfLayers.ACCNTNG_FRMWRK()
+	}
+
+
+ 	op INSTTTNL_SCTR_domain  INSTTTNL_SCTR()
+	{
+		unionOfLayers.INSTTTNL_SCTR()
+	}
+
+
+ 	op String  SUBA_CD()
+	{
+		unionOfLayers.SUBA_CD()
+	}
+
+
+ 	op TYP_INSTRMNT_domain  TYP_INSTRMNT()
+	{
+		unionOfLayers.TYP_INSTRMNT()
+	}
+
+
+ 	op RPYMNT_RGHTS_domain  RPYMNT_RGHTS()
+	{
+		unionOfLayers.RPYMNT_RGHTS()
+	}
+
+
+ 	op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN()
+	{
+		unionOfLayers.PRJCT_FNNC_LN()
+	}
+
+
+ 	op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD()
+	{
+		unionOfLayers.TYP_CLLTRL_GRNT_RCVD()
+	}
+
+
+ 	op Date  DT_RFRNC()
+	{
+		unionOfLayers.DT_RFRNC()
+	}
+
+
+ 	op PRPS_domain  PRPS()
+	{
+		unionOfLayers.PRPS()
+	}
+
+
+ 	op String  ENTTY_RIAD_CD_RPRTNG_AGNT()
+	{
+		unionOfLayers.ENTTY_RIAD_CD_RPRTNG_AGNT()
+	}
+
+}
+class F_05_01_REF_OutputItem_Table {
+				refers  F_05_01_REF_OutputItem_UnionTable  unionOfLayersTable
+				contains  F_05_01_REF_OutputItem [] F_05_01_REF_OutputItems 
+				op  F_05_01_REF_OutputItem [] calc_F_05_01_REF_OutputItems() {
+					var items = new org.eclipse.emf.common.util.BasicEList<F_05_01_REF_OutputItem>()
+				for( F_05_01_REF_OutputItem_UnionItem item : unionOfLayersTable.F_05_01_REF_OutputItem_UnionItems)
+				{
+					var newItem = Output_tablesFactory.eINSTANCE.createF_05_01_REF_OutputItem
+					newItem.unionOfLayers =  item
+					items.add(newItem)
+}
+				return items
+					} 
+				op String  init() {
+					org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
+				 this.F_05_01_REF_OutputItems.addAll(calc_F_05_01_REF_OutputItems()) 
+ 				return null
+					}
+			} 
+

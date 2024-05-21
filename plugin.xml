@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated report_cells -->
+      <package
+            uri="report_cells"
+            class="report_cells.Report_cellsPackage"
+            genModel="src/report_cells.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated F_05_01_REF_OutputItem_Logic -->
+      <package
+            uri="F_05_01_REF_OutputItem_Logic"
+            class="F_05_01_REF_OutputItem_Logic.F_05_01_REF_OutputItem_LogicPackage"
+            genModel="src/F_05_01_REF_OutputItem_Logic.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sdd_domains -->
+      <package
+            uri="sdd_domains"
+            class="sdd_domains.Sdd_domainsPackage"
+            genModel="src/sdd_domains.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated output_tables -->
+      <package
+            uri="output_tables"
+            class="output_tables.Output_tablesPackage"
+            genModel="src/output_tables.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated F_05_01_REF_OutputItem_output_layer_amendment -->
+      <package
+            uri="F_05_01_REF_OutputItem_output_layer_amendment"
+            class="F_05_01_REF_OutputItem_output_layer_amendment.F_05_01_REF_OutputItem_output_layer_amendmentPackage"
+            genModel="src/F_05_01_REF_OutputItem_output_layer_amendment.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated input_tables -->
+      <package
+            uri="input_tables"
+            class="input_tables.Input_tablesPackage"
+            genModel="src/input_tables.xcore"/>
+   </extension>
+
+</plugin>
