@@ -263,12 +263,7 @@ class F_05_01_REF_OutputItem_UnionTable {
 			 	contains  F_05_01_REF_OutputItem_UnionItem []   F_05_01_REF_OutputItem_UnionItems	
 			 	refers Loans_and_advances_Table  Loans_and_advances_Table
 			 	refers Non_negotiable_bonds_Table  Non_negotiable_bonds_Table
-			 	refers Advances_that_are_not_loans_Table  Advances_that_are_not_loans_Table
-			 	refers Credit_card_debt_Table  Credit_card_debt_Table
-			 	refers Finance_leases_Table  Finance_leases_Table
-			 	refers Reverse_repurchase_agreements_Table  Reverse_repurchase_agreements_Table
-			 	refers Trade_receivables_Table  Trade_receivables_Table
-			 	refers Commercial_real_estate_CRE_loans_Table  Commercial_real_estate_CRE_loans_Table
+			 	
 			 	op F_05_01_REF_OutputItem_UnionItem []   calc_F_05_01_REF_OutputItem_UnionItems() 
 				{
 				 	var items = new org.eclipse.emf.common.util.BasicEList<F_05_01_REF_OutputItem_UnionItem>()
@@ -284,42 +279,7 @@ for(Non_negotiable_bonds item : non_negotiable_bonds_Table.non_negotiable_bondss
 	newItem.base = item
 	items.add(newItem)
 }
-for(Advances_that_are_not_loans item : advances_that_are_not_loans_Table.advances_that_are_not_loanss)
-{
-	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
-	newItem.base = item
-	items.add(newItem)
-}
-for(Credit_card_debt item : credit_card_debt_Table.credit_card_debts)
-{
-	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
-	newItem.base = item
-	items.add(newItem)
-}
-for(Finance_leases item : finance_leases_Table.finance_leasess)
-{
-	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
-	newItem.base = item
-	items.add(newItem)
-}
-for(Reverse_repurchase_agreements item : reverse_repurchase_agreements_Table.reverse_repurchase_agreementss)
-{
-	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
-	newItem.base = item
-	items.add(newItem)
-}
-for(Trade_receivables item : trade_receivables_Table.trade_receivabless)
-{
-	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
-	newItem.base = item
-	items.add(newItem)
-}
-for(Commercial_real_estate_CRE_loans item : commercial_real_estate_CRE_loans_Table.commercial_real_estate_CRE_loanss)
-{
-	var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createF_05_01_REF_OutputItem_UnionItem
-	newItem.base = item
-	items.add(newItem)
-}
+
 				 	return items
 				}
 			 	op String  init() 
@@ -336,28 +296,17 @@ class Loans_and_advances  extends F_05_01_REF_OutputItem_Base {
 // remove any duplicates in these refers statements
 refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
 // remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
 refers BIRD_FNNCL_ASST_INSTRMNT_LDM bIRD_FNNCL_ASST_INSTRMNT_LDM
 // remove any duplicates in these refers statements
 refers BIRD_PRTY_LDM bIRD_PRTY_LDM
 // remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_FNNCL_ASST_INSTRMNT_LDM bIRD_FNNCL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
 refers BIRD_CLLTRL_LDM bIRD_CLLTRL_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_FNNCL_ASST_INSTRMNT_LDM bIRD_FNNCL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
+
+
+
 op int  GRSS_CRRYNG_AMNT() 
 {
-	"TODO"
+	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.GRSS_CRRYNG_AMNT
 }
 @dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
 op int  CRRYNG_AMNT() 
@@ -373,7 +322,7 @@ op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM()
 {
 	sdd_domains.TYP_ACCNTNG_ITM_domain.FINANCIAL_ASSETS
 }
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.HLD_SL_INDCTR")
+@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
 op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
 {
 	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.HLD_SL_INDCTR
@@ -398,7 +347,7 @@ op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL()
 {
 	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.ACCNTNG_PRTFL_VLTN_RL
 }
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.ACCNTNG_FRMWRK")
+@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.ACCNTNG_PRTFL_VLTN_RL")
 op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK() 
 {
 	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.ACCNTNG_FRMWRK
@@ -451,35 +400,53 @@ op String  ENTTY_RIAD_CD_RPRTNG_AGNT()
 class Loans_and_advances_Table {
 				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
 				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
 				refers BIRD_FNNCL_ASST_INSTRMNT_LDM_Table bIRD_FNNCL_ASST_INSTRMNT_LDM_Table
 				// remove any duplicates in these refers statements
 				refers BIRD_PRTY_LDM_Table bIRD_PRTY_LDM_Table
 				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_FNNCL_ASST_INSTRMNT_LDM_Table bIRD_FNNCL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
 				refers BIRD_CLLTRL_LDM_Table bIRD_CLLTRL_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_FNNCL_ASST_INSTRMNT_LDM_Table bIRD_FNNCL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
+				
+				refers BIRD_OTHR_LN_LDM_Table bIRD_OTHR_LN_LDM_Table
 				// remove any duplicates in these refers statements
 			 	contains  Loans_and_advances []   Loans_and_advancess	
 			 	op Loans_and_advances []   calc_Loans_and_advancess() 
 				{
 				 	var items = new org.eclipse.emf.common.util.BasicEList<Loans_and_advances>()
-		 		 	//Join up any refered tables that you need to join
-		 		 	//loop through the main table
-		 		 	//create an item using var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createLoans_and_advances
-		 		 	//set any references you want to on the new Item so that it can refer to themin operations
-		 		 	return items
+		 		 	for( BIRD_OTHR_LN_LDM other_loan : BIRD_OTHR_LN_LDM_Table.BIRD_OTHR_LN_LDMs)
+		 		 	{
+		 		 			var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createLoans_and_advances
+		 		 			
+		 		 			val debtors = other_loan.other_loan_has_Debtor_s_via_Other_loan_Debtor_assignment_2wayassociation
+		 		 			for (debtor:debtors)
+		 		 			{
+		 		 				if (debtor.MN_DBTR_INDCTR==  MN_DBTR_INDCTR_domain.MAIN_DEBTOR)
+		 		 				{	 					 					 		 					
+		 		 					newItem.BIRD_PRTY_LDM = debtor.linked_BIRD_LN_DBTR_LDM.linked_BIRD_PRTY_LDM
+		 		 				}
+		 		 				
+		 		 			}
+			 		 		
+			 		 		// get the loans roles
+			 		 		val the_roles =  other_loan.parent_BIRD_INSTRMNT_LDM.instrument_acts_in_Instrument_role_s__2wayassociation
+			 		 		// get the role that is for financial assets
+			 		 		
+			 		 		for (role:the_roles) {
+			 		 			
+			 		 			if (role instanceof BIRD_FNNCL_ASST_INSTRMNT_LDM)
+			 		 			{
+			 		 				newItem.BIRD_FNNCL_ASST_INSTRMNT_LDM = role
+			 		 				val the_asset = (role as BIRD_FNNCL_ASST_INSTRMNT_LDM).financial_asset_instrument_type_delegate
+			 		 				if (the_asset instanceof BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM)
+			 		 				{
+			 		 					newItem.BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM =  the_asset
+			 		 				}
+			 		 			}
+			 		 	 	}
+			 		 		
+			 		 		items.add(newItem)
+		 		 		}
+		 		 	
+	 				return items
 				}
 			 	op String  init() 
 				{
@@ -493,19 +460,11 @@ class Non_negotiable_bonds  extends F_05_01_REF_OutputItem_Base {
 // remove any duplicates in these refers statements
 refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM
 // remove any duplicates in these refers statements
-refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM
-// remove any duplicates in these refers statements
+
 refers BIRD_PRTY_LDM bIRD_PRTY_LDM
 // remove any duplicates in these refers statements
 refers BIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM bIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM
-// remove any duplicates in these refers statements
-refers BIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM bIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM
-// remove any duplicates in these refers statements
-refers BIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM bIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM
+
 @dep (dep1="BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM.GRSS_CRRYNG_AMNT")
 op int  GRSS_CRRYNG_AMNT() 
 {
@@ -600,20 +559,12 @@ op String  ENTTY_RIAD_CD_RPRTNG_AGNT()
 class Non_negotiable_bonds_Table {
 				refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table
 				// remove any duplicates in these refers statements
-				refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table bIRD_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_LDM_Table
 				// remove any duplicates in these refers statements
 				refers BIRD_PRTY_LDM_Table bIRD_PRTY_LDM_Table
 				// remove any duplicates in these refers statements
 				refers BIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM_Table bIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM_Table
 				// remove any duplicates in these refers statements
-				refers BIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM_Table bIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM_Table bIRD_LNG_NN_NGTBL_SCRTY_PSTN_LDM_Table
-				// remove any duplicates in these refers statements
+
 			 	contains  Non_negotiable_bonds []   Non_negotiable_bondss	
 			 	op Non_negotiable_bonds []   calc_Non_negotiable_bondss() 
 				{
@@ -631,652 +582,3 @@ class Non_negotiable_bonds_Table {
 		 		 	return null
 				}
 			}
-class Advances_that_are_not_loans  extends F_05_01_REF_OutputItem_Base {
-
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-op int  GRSS_CRRYNG_AMNT() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
-op int  CRRYNG_AMNT() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT
-}
-op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
-{
-	"TODO"
-}
-op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM() 
-{
-	"TODO"
-}
-op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
-{
-	"TODO"
-}
-op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR() 
-{
-	"TODO"
-}
-op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR() 
-{
-	"TODO"
-}
-op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
-{
-	"TODO"
-}
-op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL() 
-{
-	"TODO"
-}
-op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK() 
-{
-	"TODO"
-}
-op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
-{
-	"TODO"
-}
-op String  SUBA_CD() 
-{
-	"TODO"
-}
-op TYP_INSTRMNT_domain  TYP_INSTRMNT() 
-{
-	"TODO"
-}
-op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
-{
-	"TODO"
-}
-op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
-{
-	"TODO"
-}
-op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC")
-op Date  DT_RFRNC() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC
-}
-op PRPS_domain  PRPS() 
-{
-	"TODO"
-}
-op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
-{
-	"TODO"
-}
-}
-
-class Advances_that_are_not_loans_Table {
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-			 	contains  Advances_that_are_not_loans []   Advances_that_are_not_loanss	
-			 	op Advances_that_are_not_loans []   calc_Advances_that_are_not_loanss() 
-				{
-				 	var items = new org.eclipse.emf.common.util.BasicEList<Advances_that_are_not_loans>()
-		 		 	//Join up any refered tables that you need to join
-		 		 	//loop through the main table
-		 		 	//create an item using var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createAdvances_that_are_not_loans
-		 		 	//set any references you want to on the new Item so that it can refer to themin operations
-		 		 	return items
-				}
-			 	op String  init() 
-				{
-				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
-		 		 	this.advances_that_are_not_loanss.addAll(calc_Advances_that_are_not_loanss) 		 
-		 		 	return null
-				}
-			}
-class Credit_card_debt  extends F_05_01_REF_OutputItem_Base {
-
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-op int  GRSS_CRRYNG_AMNT() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
-op int  CRRYNG_AMNT() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT
-}
-op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
-{
-	"TODO"
-}
-op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM() 
-{
-	"TODO"
-}
-op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
-{
-	"TODO"
-}
-op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR() 
-{
-	"TODO"
-}
-op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR() 
-{
-	"TODO"
-}
-op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
-{
-	"TODO"
-}
-op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL() 
-{
-	"TODO"
-}
-op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK() 
-{
-	"TODO"
-}
-op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
-{
-	"TODO"
-}
-op String  SUBA_CD() 
-{
-	"TODO"
-}
-op TYP_INSTRMNT_domain  TYP_INSTRMNT() 
-{
-	"TODO"
-}
-op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
-{
-	"TODO"
-}
-op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
-{
-	"TODO"
-}
-op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC")
-op Date  DT_RFRNC() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC
-}
-op PRPS_domain  PRPS() 
-{
-	"TODO"
-}
-op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
-{
-	"TODO"
-}
-}
-
-class Credit_card_debt_Table {
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-			 	contains  Credit_card_debt []   Credit_card_debts	
-			 	op Credit_card_debt []   calc_Credit_card_debts() 
-				{
-				 	var items = new org.eclipse.emf.common.util.BasicEList<Credit_card_debt>()
-		 		 	//Join up any refered tables that you need to join
-		 		 	//loop through the main table
-		 		 	//create an item using var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createCredit_card_debt
-		 		 	//set any references you want to on the new Item so that it can refer to themin operations
-		 		 	return items
-				}
-			 	op String  init() 
-				{
-				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
-		 		 	this.credit_card_debts.addAll(calc_Credit_card_debts) 		 
-		 		 	return null
-				}
-			}
-class Finance_leases  extends F_05_01_REF_OutputItem_Base {
-
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-op int  GRSS_CRRYNG_AMNT() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
-op int  CRRYNG_AMNT() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT
-}
-op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
-{
-	"TODO"
-}
-op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM() 
-{
-	"TODO"
-}
-op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
-{
-	"TODO"
-}
-op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR() 
-{
-	"TODO"
-}
-op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR() 
-{
-	"TODO"
-}
-op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
-{
-	"TODO"
-}
-op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL() 
-{
-	"TODO"
-}
-op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK() 
-{
-	"TODO"
-}
-op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
-{
-	"TODO"
-}
-op String  SUBA_CD() 
-{
-	"TODO"
-}
-op TYP_INSTRMNT_domain  TYP_INSTRMNT() 
-{
-	"TODO"
-}
-op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
-{
-	"TODO"
-}
-op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
-{
-	"TODO"
-}
-op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC")
-op Date  DT_RFRNC() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC
-}
-op PRPS_domain  PRPS() 
-{
-	"TODO"
-}
-op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
-{
-	"TODO"
-}
-}
-
-class Finance_leases_Table {
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-			 	contains  Finance_leases []   Finance_leasess	
-			 	op Finance_leases []   calc_Finance_leasess() 
-				{
-				 	var items = new org.eclipse.emf.common.util.BasicEList<Finance_leases>()
-		 		 	//Join up any refered tables that you need to join
-		 		 	//loop through the main table
-		 		 	//create an item using var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createFinance_leases
-		 		 	//set any references you want to on the new Item so that it can refer to themin operations
-		 		 	return items
-				}
-			 	op String  init() 
-				{
-				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
-		 		 	this.finance_leasess.addAll(calc_Finance_leasess) 		 
-		 		 	return null
-				}
-			}
-class Reverse_repurchase_agreements  extends F_05_01_REF_OutputItem_Base {
-
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-op int  GRSS_CRRYNG_AMNT() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
-op int  CRRYNG_AMNT() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT
-}
-op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
-{
-	"TODO"
-}
-op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM() 
-{
-	"TODO"
-}
-op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
-{
-	"TODO"
-}
-op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR() 
-{
-	"TODO"
-}
-op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR() 
-{
-	"TODO"
-}
-op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
-{
-	"TODO"
-}
-op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL() 
-{
-	"TODO"
-}
-op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK() 
-{
-	"TODO"
-}
-op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
-{
-	"TODO"
-}
-op String  SUBA_CD() 
-{
-	"TODO"
-}
-op TYP_INSTRMNT_domain  TYP_INSTRMNT() 
-{
-	"TODO"
-}
-op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
-{
-	"TODO"
-}
-op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
-{
-	"TODO"
-}
-op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC")
-op Date  DT_RFRNC() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC
-}
-op PRPS_domain  PRPS() 
-{
-	"TODO"
-}
-op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
-{
-	"TODO"
-}
-}
-
-class Reverse_repurchase_agreements_Table {
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-			 	contains  Reverse_repurchase_agreements []   Reverse_repurchase_agreementss	
-			 	op Reverse_repurchase_agreements []   calc_Reverse_repurchase_agreementss() 
-				{
-				 	var items = new org.eclipse.emf.common.util.BasicEList<Reverse_repurchase_agreements>()
-		 		 	//Join up any refered tables that you need to join
-		 		 	//loop through the main table
-		 		 	//create an item using var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createReverse_repurchase_agreements
-		 		 	//set any references you want to on the new Item so that it can refer to themin operations
-		 		 	return items
-				}
-			 	op String  init() 
-				{
-				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
-		 		 	this.reverse_repurchase_agreementss.addAll(calc_Reverse_repurchase_agreementss) 		 
-		 		 	return null
-				}
-			}
-class Trade_receivables  extends F_05_01_REF_OutputItem_Base {
-
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-op int  GRSS_CRRYNG_AMNT() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
-op int  CRRYNG_AMNT() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT
-}
-op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
-{
-	"TODO"
-}
-op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM() 
-{
-	"TODO"
-}
-op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
-{
-	"TODO"
-}
-op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR() 
-{
-	"TODO"
-}
-op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR() 
-{
-	"TODO"
-}
-op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
-{
-	"TODO"
-}
-op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL() 
-{
-	"TODO"
-}
-op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK() 
-{
-	"TODO"
-}
-op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
-{
-	"TODO"
-}
-op String  SUBA_CD() 
-{
-	"TODO"
-}
-op TYP_INSTRMNT_domain  TYP_INSTRMNT() 
-{
-	"TODO"
-}
-op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
-{
-	"TODO"
-}
-op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
-{
-	"TODO"
-}
-op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC")
-op Date  DT_RFRNC() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC
-}
-op PRPS_domain  PRPS() 
-{
-	"TODO"
-}
-op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
-{
-	"TODO"
-}
-}
-
-class Trade_receivables_Table {
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-			 	contains  Trade_receivables []   Trade_receivabless	
-			 	op Trade_receivables []   calc_Trade_receivabless() 
-				{
-				 	var items = new org.eclipse.emf.common.util.BasicEList<Trade_receivables>()
-		 		 	//Join up any refered tables that you need to join
-		 		 	//loop through the main table
-		 		 	//create an item using var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createTrade_receivables
-		 		 	//set any references you want to on the new Item so that it can refer to themin operations
-		 		 	return items
-				}
-			 	op String  init() 
-				{
-				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
-		 		 	this.trade_receivabless.addAll(calc_Trade_receivabless) 		 
-		 		 	return null
-				}
-			}
-class Commercial_real_estate_CRE_loans  extends F_05_01_REF_OutputItem_Base {
-
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-// remove any duplicates in these refers statements
-refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM
-op int  GRSS_CRRYNG_AMNT() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT")
-op int  CRRYNG_AMNT() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.CRRYNG_AMNT
-}
-op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN() 
-{
-	"TODO"
-}
-op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM() 
-{
-	"TODO"
-}
-op HLD_SL_INDCTR_domain  HLD_SL_INDCTR() 
-{
-	"TODO"
-}
-op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR() 
-{
-	"TODO"
-}
-op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR() 
-{
-	"TODO"
-}
-op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR() 
-{
-	"TODO"
-}
-op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL() 
-{
-	"TODO"
-}
-op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK() 
-{
-	"TODO"
-}
-op INSTTTNL_SCTR_domain  INSTTTNL_SCTR() 
-{
-	"TODO"
-}
-op String  SUBA_CD() 
-{
-	"TODO"
-}
-op TYP_INSTRMNT_domain  TYP_INSTRMNT() 
-{
-	"TODO"
-}
-op RPYMNT_RGHTS_domain  RPYMNT_RGHTS() 
-{
-	"TODO"
-}
-op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN() 
-{
-	"TODO"
-}
-op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD() 
-{
-	"TODO"
-}
-@dep (dep1="BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC")
-op Date  DT_RFRNC() 
-{
-	BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM.DT_RFRNC
-}
-op PRPS_domain  PRPS() 
-{
-	"TODO"
-}
-op String  ENTTY_RIAD_CD_RPRTNG_AGNT() 
-{
-	"TODO"
-}
-}
-
-class Commercial_real_estate_CRE_loans_Table {
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-				refers BIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table bIRD_BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_LDM_Table
-				// remove any duplicates in these refers statements
-			 	contains  Commercial_real_estate_CRE_loans []   Commercial_real_estate_CRE_loanss	
-			 	op Commercial_real_estate_CRE_loans []   calc_Commercial_real_estate_CRE_loanss() 
-				{
-				 	var items = new org.eclipse.emf.common.util.BasicEList<Commercial_real_estate_CRE_loans>()
-		 		 	//Join up any refered tables that you need to join
-		 		 	//loop through the main table
-		 		 	//create an item using var newItem = F_05_01_REF_OutputItem_LogicFactory.eINSTANCE.createCommercial_real_estate_CRE_loans
-		 		 	//set any references you want to on the new Item so that it can refer to themin operations
-		 		 	return items
-				}
-			 	op String  init() 
-				{
-				 	org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
-		 		 	this.commercial_real_estate_CRE_loanss.addAll(calc_Commercial_real_estate_CRE_loanss) 		 
-		 		 	return null
-				}
-			}
-

@@ -2,6 +2,7 @@
 package output_tables
 
 import sdd_domains.* 
+import F_05_01_REF_OutputItem_Logic.*
 
 annotation "long_name" as long_name
 @long_name ( long_name="Nature_of_Report_FINREP_Reference")
@@ -1367,90 +1368,143 @@ class F_04_10_REF_OutputItem_Table {
 } 
 @long_name ( long_name="Breakdown_of_non_trading_loans_and_advances_by_product_Loans_and_advances_other_than_held_for_trading_trading_or_held_for_sale_assets_by_product_Reference")
 class F_05_01_REF_OutputItem {
+	refers F_05_01_REF_OutputItem_UnionItem  unionOfLayers 
 
-
-	@long_name ( long_name="Gross_carrying_amount")
  	op int  GRSS_CRRYNG_AMNT()
 	{
-        return 0
+		unionOfLayers.GRSS_CRRYNG_AMNT()
 	}
-	@long_name ( long_name="Carrying_amount")
+
+
  	op int  CRRYNG_AMNT()
 	{
-        return 0
+		unionOfLayers.CRRYNG_AMNT()
 	}
-	@long_name ( long_name="Accounting_classification")
+
+
  	op ACCNTNG_CLSSFCTN_domain  ACCNTNG_CLSSFCTN()
 	{
+		unionOfLayers.ACCNTNG_CLSSFCTN()
 	}
-	@long_name ( long_name="Type_of_accounting_item")
+
+
  	op TYP_ACCNTNG_ITM_domain  TYP_ACCNTNG_ITM()
 	{
+		unionOfLayers.TYP_ACCNTNG_ITM()
 	}
-	@long_name ( long_name="Held_for_sale_indicator")
+
+
  	op HLD_SL_INDCTR_domain  HLD_SL_INDCTR()
 	{
+		unionOfLayers.HLD_SL_INDCTR()
 	}
-	@long_name ( long_name="Held_for_trading_indicator")
+
+
  	op HLD_TRDNG_INDCTR_domain  HLD_TRDNG_INDCTR()
 	{
+		unionOfLayers.HLD_TRDNG_INDCTR()
 	}
-	@long_name ( long_name="Held_to_maturity_indicator")
+
+
  	op HLD_MTRTY_INDCTR_domain  HLD_MTRTY_INDCTR()
 	{
+		unionOfLayers.HLD_MTRTY_INDCTR()
 	}
-	@long_name ( long_name="Subject_to_impairment_indicator")
+
+
  	op SBJCT_IMPRMNT_INDCTR_domain  SBJCT_IMPRMNT_INDCTR()
 	{
+		unionOfLayers.SBJCT_IMPRMNT_INDCTR()
 	}
-	@long_name ( long_name="Accounting_portfolio_valuation_rules")
+
+
  	op VLTN_RL_domain  ACCNTNG_PRTFL_VLTN_RL()
 	{
+		unionOfLayers.ACCNTNG_PRTFL_VLTN_RL()
 	}
-	@long_name ( long_name="Accounting_Framework")
+
+
  	op ACCNTNG_FRMWRK_domain  ACCNTNG_FRMWRK()
 	{
+		unionOfLayers.ACCNTNG_FRMWRK()
 	}
-	@long_name ( long_name="Institutional_sector")
+
+
  	op INSTTTNL_SCTR_domain  INSTTTNL_SCTR()
 	{
+		unionOfLayers.INSTTTNL_SCTR()
 	}
-	@long_name ( long_name="SUBA_Reporting_Identifier")
+
+
  	op String  SUBA_CD()
 	{
+		unionOfLayers.SUBA_CD()
 	}
-	@long_name ( long_name="Type_of_instrument")
+
+
  	op TYP_INSTRMNT_domain  TYP_INSTRMNT()
 	{
+		unionOfLayers.TYP_INSTRMNT()
 	}
-	@long_name ( long_name="Repayment_rights")
+
+
  	op RPYMNT_RGHTS_domain  RPYMNT_RGHTS()
 	{
+		unionOfLayers.RPYMNT_RGHTS()
 	}
-	@long_name ( long_name="Project_finance_loan")
+
+
  	op PRJCT_FNNC_LN_domain  PRJCT_FNNC_LN()
 	{
+		unionOfLayers.PRJCT_FNNC_LN()
 	}
-	@long_name ( long_name="Type_of_collateral_or_guarantee_received")
+
+
  	op TYP_PRTCTN_domain  TYP_CLLTRL_GRNT_RCVD()
 	{
+		unionOfLayers.TYP_CLLTRL_GRNT_RCVD()
 	}
-	@long_name ( long_name="Reference_date")
+
+
  	op Date  DT_RFRNC()
 	{
+		unionOfLayers.DT_RFRNC()
 	}
-	@long_name ( long_name="Purpose")
+
+
  	op PRPS_domain  PRPS()
 	{
+		unionOfLayers.PRPS()
 	}
-	@long_name ( long_name="The_RIAD_code_of_the_reporting_agent")
+
+
  	op String  ENTTY_RIAD_CD_RPRTNG_AGNT()
 	{
+		unionOfLayers.ENTTY_RIAD_CD_RPRTNG_AGNT()
 	}
+
 }
 class F_05_01_REF_OutputItem_Table {
-	contains  F_05_01_REF_OutputItem [] F_05_01_REF_OutputItems 								
-} 
+				refers  F_05_01_REF_OutputItem_UnionTable  unionOfLayersTable
+				contains  F_05_01_REF_OutputItem [] F_05_01_REF_OutputItems 
+				op  F_05_01_REF_OutputItem [] calc_F_05_01_REF_OutputItems() {
+					var items = new org.eclipse.emf.common.util.BasicEList<F_05_01_REF_OutputItem>()
+				for( F_05_01_REF_OutputItem_UnionItem item : unionOfLayersTable.f_05_01_REF_OutputItem_UnionItems)
+				{
+					var newItem = Output_tablesFactory.eINSTANCE.createF_05_01_REF_OutputItem
+					newItem.unionOfLayers =  item
+					items.add(newItem)
+}
+				return items
+					} 
+				op String  init() {
+					org.eclipse.efbt.regpot_desktop.orchestrator.Orchestration.init(this)
+				 this.f_05_01_REF_OutputItems.addAll(calc_F_05_01_REF_OutputItems()) 
+ 				return null
+					}
+			} 
+
+
 @long_name ( long_name="Breakdown_of_loans_and_advances_other_than_held_for_trading_trading_or_held_for_sale_assets_to_non_financial_corporations_by_NACE_codes_Reference")
 class F_06_01_REF_OutputItem {
 
@@ -8057,10 +8111,7 @@ class F_40_01_REF_OutputItem {
 	{
         return 0
 	}
-	@long_name ( long_name="Entity_code")
- 	op String  ENTTY_CD()
-	{
-	}
+
 	@long_name ( long_name="Notional_amount")
  	op int  NTNL_AMNT()
 	{
@@ -8150,10 +8201,7 @@ class F_40_01_REF_OutputItem_Table {
 class F_40_02_REF_OutputItem {
 
 
-	@long_name ( long_name="Holding_company_code")
- 	op String  HLDNG_ENTTY_CD()
-	{
-	}
+
 	@long_name ( long_name="Accumulated_equity_interest")
  	op double  ACCMLTD_EQT_INTRST()
 	{
